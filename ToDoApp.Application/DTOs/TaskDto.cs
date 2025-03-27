@@ -1,8 +1,7 @@
-namespace ToDoApp.Domain.Entities;
+namespace ToDoApp.Application.DTOs;
 
-public class TaskItem
+public class TaskDto
 {
-    public int Id { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Description { get; set; } = string.Empty;
     public bool IsCompleted { get; set; } = false;

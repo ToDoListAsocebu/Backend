@@ -1,4 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using ToDoApp.Application.Validations;
 using ToDoApp.Application.Interfaces.Repositories;
 using ToDoApp.Infrastructure.Persistence;
 using ToDoApp.Infrastructure.Repositories;
@@ -16,6 +19,9 @@ builder.Services.AddCors(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddValidatorsFromAssemblyContaining<TaskValidator>();
+builder.Services.AddFluentValidationAutoValidation();
+
 
 // Configurar SQL Server
 builder.Services.AddDbContext<AppDbContext>(options =>

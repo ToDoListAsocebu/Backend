@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Lgcw0tEx2ef0J2nAskrwJe1C+NItECRVMetL4wcQXZntwN/y01l2Wet7mjcAUz/ZlZCFpcZ/IWwLGSvwScvN1g==",
+  "dgSpecHash": "hV7n0b/ErSfVSQPMiE4Kt7lvCltO5+vw7iuPLNHwxEb1pJSOQLjpK8umUbRj3VKwPPP0567JzD6bqYk3sVsBwA==",
   "success": true,
   "projectFilePath": "C:\\Users\\CamiloAndresChaparro\\Documents\\Prueba\\Backend\\ToDoApp.API\\ToDoApp.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",
+    "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.4\\microsoft.aspnetcore.openapi.8.0.4.nupkg.sha512",
     "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

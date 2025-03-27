@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rY6AIjBAwQLsM4rkCXjgIv2jIIvIKVYWyEKk5fTr5KNdymn8aFgWkWTbK0RkwB89VlgzDP3N5s3zvWUHy6YmGw==",
+  "dgSpecHash": "IJSqW5seFzvrneUhVA14mXI3ob3cZGqQnM6qEZmzMXsTmheY/RBUW0eAsxGqSFbHIrfg3rSu8j/HPXF4LzNYoA==",
   "success": true,
   "projectFilePath": "C:\\Users\\CamiloAndresChaparro\\Documents\\Prueba\\Backend\\ToDoApp.Application\\ToDoApp.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\CamiloAndresChaparro\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512"
+  ],
   "logs": []
 }
