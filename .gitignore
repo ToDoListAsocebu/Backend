@@ -1,0 +1,25 @@
+# Archivos de compilación y dependencias
+bin/
+obj/
+*.exe
+*.dll
+*.pdb
+*.log
+*.cache
+*.vs/
+*.vscode/
+*.user
+*.suo
+*.sqlite
+*.sqlite-journal
+*.db
+*.db-shm
+*.db-wal
+
+# Configuraciones de usuario y archivos generados por herramientas
+Thumbs.db
+*.swp
+.DS_Store
+
+# Archivos de migración generados por EF Core
+# Migrations/
