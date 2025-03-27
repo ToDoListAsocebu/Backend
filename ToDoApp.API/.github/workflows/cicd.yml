@@ -1,0 +1,61 @@
+name: CI/CD ToDoApp
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Clonar Repositorio
+        uses: actions/checkout@v3
+
+      - name: 🏗️ Configurar .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0'
+
+      - name: 📦 Restaurar Dependencias
+        run: dotnet restore
+
+      - name: 🚀 Compilar Proyecto
+        run: dotnet build --configuration Release --no-restore
+
+      - name: 🧪 Ejecutar Pruebas
+        run: dotnet test --configuration Release --no-build --verbosity normal
+
+  docker-build-and-push:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛎️ Clonar Repositorio
+        uses: actions/checkout@v3
+
+      - name: 🔑 Autenticación en Docker Hub
+        run: echo "${{ secrets.DOCKER_HUB_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_HUB_USERNAME }}" --password-stdin
+
+      - name: 📦 Construir y Etiquetar Imagen Docker
+        run: |
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/todoapp-api:latest -f ToDoApp.API/Dockerfile .
+
+      - name: 📤 Subir Imagen a Docker Hub
+        run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/todoapp-api:latest
+
+  deploy:
+    needs: docker-build-and-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 Desplegar en Azure
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: "todoapp-api"
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          images: "${{ secrets.DOCKER_HUB_USERNAME }}/todoapp-api:latest"
