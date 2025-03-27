@@ -5,7 +5,7 @@ using ToDoApp.Domain.Entities;
 
 namespace ToDoApp.API.Controllers;
 
-[Route("api/tasks")]
+[Route("api/[controller]")]
 [ApiController]
 public class TaskController : ControllerBase
 {
