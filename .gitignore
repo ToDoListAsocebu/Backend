@@ -23,3 +23,6 @@ Thumbs.db
 
 # Archivos de migración generados por EF Core
 # Migrations/
+
+# Archivos de configuración de la base de datos
+appsettings.json
